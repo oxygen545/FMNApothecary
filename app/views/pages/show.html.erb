@@ -7,6 +7,7 @@
           <h2 class="jumbotron-heading"><%= @page.title %></h2>
           <h1 class="jumbotron-heading"><%= @page.heading %></h1>
           <p class="lead text-muted"><%= raw(@page.content) %></p>
+          <%# link_to "Destroy", @page, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
           <p><%# add link for sales or other action items %></p>
         </div>
       </section>
@@ -31,7 +32,7 @@
                       <div class="btn-group" ><p>
                         <%= link_to "Show", page_subpage_path(@page,sp), :class =>"btn btn-sm btn-primary my-2"%>
                         <%# link_to "Edit", edit_page_subpage_path(@page,sp), :class =>"btn btn-sm btn-secondary my-2"%>
-                        <%# link_to "Destroy", sp, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
+                        <%= link_to "Destroy", sp, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
                       </p></div>
                       <small class="text-muted"><%= time_ago_in_words(sp.updated_at) %></small>
                     </div>
