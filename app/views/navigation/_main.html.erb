@@ -36,10 +36,12 @@
 <%# we are coming from the page controller and have a page in @page %>
 <% @nav_toggle_text ="Contents -> " %>
         <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white"><%= link_to "Home", "/", :class =>"text-white" %></h4>
-          <p class="text-muted"><%= @site_title %></p>
-          <h4 class="text-white"><%= link_to "Etsy Shop", "", :class => "text-white" %></h4>
+          <h4 class="text-white"><%= link_to "Home", pages_path, :class =>"text-white" %></h4>
+          <h5 class="text-white"><%= link_to "Etsy Shop", "https://www.etsy.com/shop/FMNNaturalApothecary", :class => "text-white" %></h5>
+          <h5 class="text-white"><%= link_to "Facebook", "https://www.facebook.com/ForgetMeNot.Natural", :class => "text-white" %></h5>
+          <h5 class="text-white"><%= link_to "Instagram", "https://www.instagram.com/fmnnaturalapothecary/", :class => "text-white" %></h5>
         </div>
+
         <div class="col-sm-4 offset-md-1 py-4">
           <h5 class="text-white">Links</h5>
           <ul class="list-unstyled">
@@ -54,7 +56,7 @@
   <div class="navbar navbar-dark bg-dark box-shadow">
     <div class="container d-flex justify-content-between">
       <a href="/" class="navbar-brand d-flex align-items-center">
-        Links %rquo;<strong></strong>
+        Links -><strong></strong>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation"><%= @nav_toggle_text %><span class="navbar-toggler-icon"></span>
       </button>
@@ -63,7 +65,13 @@
 <% elsif @subpage != nil %>
 <%# we are coming from the subpage controller and have a subpage in @subpage %>
 <% @nav_toggle_text ="Articles -> " %>
-        <% page = Page.find_by id: @subpage.page_id %>
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white"><%= link_to "Home", pages_path, :class =>"text-white" %></h4>
+          <h5 class="text-white"><%= link_to "Etsy Shop", "https://www.etsy.com/shop/FMNNaturalApothecary", :class => "text-white" %></h5>
+          <h5 class="text-white"><%= link_to "Facebook", "https://www.facebook.com/ForgetMeNot.Natural", :class => "text-white" %></h5>
+          <h5 class="text-white"><%= link_to "Instagram", "https://www.instagram.com/fmnnaturalapothecary/", :class => "text-white" %></h5>
+        </div>
+      <% page = Page.find_by id: @subpage.page_id %>
         <div class="col-sm-8 col-md-7 py-4">
           <h4><%= link_to "Home", "/", :class=>"text-white" %></h4>
           <p class="text-muted"><%= @site_title %></p>
