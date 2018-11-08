@@ -1,3 +1,4 @@
+<% @site_title = ENV['SITE_TITLE'] %>
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
@@ -7,7 +8,9 @@
 <% @nav_toggle_text = "More Info -> " %>
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white"><%= link_to "Home", pages_path, :class =>"text-white" %></h4>
-          <p class="text-muted"><%= @site_title %></p>
+          <h5 class="text-white"><%= link_to "Etsy Shop", "https://www.etsy.com/shop/FMNNaturalApothecary", :class => "text-white" %></h5>
+          <h5 class="text-white"><%= link_to "Facebook", "https://www.facebook.com/ForgetMeNot.Natural", :class => "text-white" %></h5>
+          <h5 class="text-white"><%= link_to "Instagram", "https://www.instagram.com/fmnnaturalapothecary/", :class => "text-white" %></h5>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h5 class="text-white">Links</h5>
@@ -35,6 +38,7 @@
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white"><%= link_to "Home", "/", :class =>"text-white" %></h4>
           <p class="text-muted"><%= @site_title %></p>
+          <h4 class="text-white"><%= link_to "Etsy Shop", "", :class => "text-white" %></h4>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h5 class="text-white">Links</h5>
@@ -50,7 +54,7 @@
   <div class="navbar navbar-dark bg-dark box-shadow">
     <div class="container d-flex justify-content-between">
       <a href="/" class="navbar-brand d-flex align-items-center">
-        <strong></strong>
+        Links %rquo;<strong></strong>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation"><%= @nav_toggle_text %><span class="navbar-toggler-icon"></span>
       </button>
@@ -63,6 +67,7 @@
         <div class="col-sm-8 col-md-7 py-4">
           <h4><%= link_to "Home", "/", :class=>"text-white" %></h4>
           <p class="text-muted"><%= @site_title %></p>
+          <h4 class="text-white"><%= link_to "Etsy Shop", "", :class => "text-white" %></h4>
           <h5><%= link_to page.link, page_path(page.id), :class=>"text-white" %></h5>
           <p class="text-muted"><%= page.content %></p>
         </div>
@@ -95,6 +100,7 @@
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white"><%= link_to "Home", pages_path, :class =>"text-white" %></h4>
           <p class="text-muted"><%= @site_title %></p>
+          <h4 class="text-white"><%= link_to "Etsy Shop", "", :class => "text-white" %></h4>
           <h4 class="text-white"><%= link_to page.link, page_path(page), :class =>"text-white" %></h4>
           <p class="text-muted"><%= page.heading %></p>          <h5 class="text-white"><%= link_to subpage.link, page_subpage_path(page.id,subpage.id), :class =>"text-white" %></h5>
           <p class="text-muted"><%= subpage.heading %></p>
